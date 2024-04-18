@@ -2,25 +2,25 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>
-#include <iostream>
 #include <vector>
 #include <ctime>
+#include <iostream>
 class player
 {
 private:
-
+public:
+	//sprite
+	sf::Sprite playerModel;
+	sf::Texture playerTexSheet;
+	//variables used to animate the sprite
+	int texVar;
+	int yVar;
+	//functions
+	//used to initialize player and variables
 	void initVariables();
 	void initPlayer();
-	float movementSpeed;
-public:
-	sf::RectangleShape playershape;
-	sf::RectangleShape earL;
-	sf::RectangleShape earR;
-	sf::RectangleShape tail;
-	player(float x=560.f, float y=800.f);
+	player(float x=80.f, float y=480.f);
 	virtual ~player();
-	void updateInput();
-	void update();
 	void render(sf::RenderTarget* target);
 };
 
