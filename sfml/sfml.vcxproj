@@ -76,14 +76,19 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\n-dawg\Desktop\sfml\sfml\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>C:\Users\n-dawg\Desktop\sfml\sfml\SFML-2.6.1;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\SFML-2.6.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-main-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\n-dawg\Desktop\sfml\sfml\SFML-2.6.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-main-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkStatus>true</LinkStatus>
     </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -130,23 +135,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cakeScene.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="projmain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cakeScene.h" />
     <ClInclude Include="game.h" />
-    <ClInclude Include="state.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="player.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="cat.png" />
-    <Image Include="tex\menu1.png" />
     <Image Include="tex\menu2.png" />
-    <Image Include="tex\splashState.png" />
-    <Image Include="tex\titleScreen.png" />
+    <Image Include="tex\menu\menu1.png" />
+    <Image Include="tex\menu\splashState.png" />
+    <Image Include="tex\menu\titleScreen.png" />
+    <Image Include="tex\player\WalkSprite.png" />
+    <Image Include="tex\sprites\gameroomSprites\MiniSprites.png" />
+    <Image Include="tex\sprites\minigameSprites\bowlSprites\IngredientBowls.png" />
+    <Image Include="tex\sprites\minigameSprites\bowlSprites\Popup.png" />
+    <Image Include="tex\sprites\minigameSprites\CatExpressions.png" />
+    <Image Include="tex\sprites\minigameSprites\ExpressionBubbles.png" />
+    <Image Include="tex\sprites\minigameSprites\MinigameBackground.png" />
+    <Image Include="tex\sprites\minigameSprites\ovenSprites\OvenSheet.png" />
+    <Image Include="tex\sprites\minigameSprites\PlayTable.PNG" />
+    <Image Include="tex\sprites\minigameSprites\whiskSprites\whiskSheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="music\mainScreen.ogg" />
+    <None Include="music\other.ogg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

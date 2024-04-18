@@ -29,7 +29,7 @@ menu::menu()
 
 	if (!splashTex.loadFromFile("tex/menu/splashState.png")) {
 		std::cout << "Cannot load splash texture!";
-}
+	}
 
 	this->splashSprite.setTexture(splashTex);
 	this->splashSprite.scale(sf::Vector2f(1, 1));

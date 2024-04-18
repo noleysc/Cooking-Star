@@ -233,14 +233,14 @@ void game::pollEEvent() {
 			if (this->e.key.code == sf::Keyboard::Escape)
 				this->window->close();
 		case sf::Event::MouseButtonPressed:
-				if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-					this->mPWH = sf::Mouse::getPosition(*this->window);
-					this->newM.setClick();
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+				this->mPWH = sf::Mouse::getPosition(*this->window);
+				this->newM.setClick();
 				std::cout << mPWH.x;
 				std::cout << mPWH.y;
+			}
+		}
 	}
-}
-}
 }
 
 void game::update()
@@ -249,7 +249,7 @@ void game::update()
 	this->pollEEvent();
 	this->updateInput();
 	this->updateMousePos();
-}
+	}
 //renders game obj
 void game::splashRenderer() {
 	this->window->clear();
@@ -271,7 +271,7 @@ void game::completeMenu() {
 	this->menuRenderer();
 	this->getClick();
 	this->rClick();
-	}
+}
 void game::drawPlayer() {
 	this->player.render(this->window);
 }
@@ -332,9 +332,9 @@ void game::bowlGame() {
 			counter = 1;
 		}
 		this->window->display();
-	}
+		}
 	this->cake.doBowlClick(this->window);
-	this->cake.drawPlayer(1, this->window);
+	this->cake.drawPlayer(2, this->window);
 	this->pollEEvent();
 	this->getClick();
 	this->rClick();

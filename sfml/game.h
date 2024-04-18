@@ -10,7 +10,6 @@ private:
 	//game logic
 
 	//variables
-	int audioVar;
 	int a;
 	int counter;
 	int points;
