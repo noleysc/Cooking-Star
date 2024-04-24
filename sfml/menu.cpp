@@ -10,14 +10,6 @@ void menu::renderMenu(sf::RenderTarget* target)
 {
 	target->draw(this->title);
 }
-void menu::setClick() {
-	menuClick = true;
-}
-bool menu::getMenuClick()
-{
-	return menuClick;
-}
-
 // constructor+destructor
 // loads textures
 menu::menu()

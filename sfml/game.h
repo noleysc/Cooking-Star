@@ -16,8 +16,8 @@ private:
 	float pointClick;
 	int rtrnSuccess;
 	int tracker;
-	sf::Vector2f cursorHold;
 	//window
+	GUI gui;
 	menu newM;
 	cake cake;
 	player player;
@@ -77,9 +77,6 @@ private:
 	sf::Texture roomSpriteTex;
 public:
 	//public variables
-
-	bool click = false;
-
 	//mouse position holder
 	sf::Vector2i mPWH;
 
@@ -91,6 +88,7 @@ public:
 	const bool windowIsOpen() const;
 
 	//declared functions
+	void changeShade();
 	void resetCounter();
 	void pollEEvent();
 	void update();
@@ -100,8 +98,6 @@ public:
 	void splashRenderer();
 	void menuRenderer();
 	void completeMenu();
-	void getClick();
-	void rClick();
 	void checkMousePos();
 	void drawPlayer();
 	void bowlGame();

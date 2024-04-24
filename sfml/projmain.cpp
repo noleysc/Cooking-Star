@@ -14,7 +14,6 @@ int main()
 			cookGame.pollEEvent();
 			cookGame.completeMenu();
 			if (((cookGame.mPWH.y > 754.f) && (cookGame.mPWH.y < 860.f)) && ((cookGame.mPWH.x > 500) && (cookGame.mPWH.x < 782.f))) {
-				cookGame.resetCounter();
 				opt = 2;
 			}
 		}
@@ -26,12 +25,12 @@ int main()
 				cookGame.resetCounter();
 				opt = 3;
 			}
-		}
 		if (opt == 3) {
 			cookGame.updateMousePos();
 			cookGame.pollEEvent();
 			cookGame.bowlGame();
 		}
-	}
+			}
+		}
 		return 0;
 }
