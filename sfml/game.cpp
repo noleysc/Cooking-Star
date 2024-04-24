@@ -5,7 +5,6 @@ void game::initVars()
 {
 	this->window = nullptr;
 	//Game logic
-	this->cursorHold;
 	this->points = 0;
 	this->pointClick = 0;
 	this->rtrnSuccess = 0;
@@ -159,6 +158,14 @@ game::~game()
 {
 	delete this->window;
 }
+void game::changeShade()
+{
+	if (this->mPWH.x < 33 && this->mPWH.y>33) {
+		std::cout << "meow";
+		this->gui.counterClick = gui.counterClick + 1;
+		this->gui.clickStar();
+	}
+}
 //function definitions
 void game::resetCounter() {
 	counter = 0;
@@ -168,12 +175,6 @@ void game::updateMousePos()
 	//update mouse positions and store them in a vect2i variable *mouse pos relative to window size
 	this->mousePosWindow = sf::Mouse::getPosition(*this->window);
 }
-//get mouse click
-void game::rClick() {
-	click = false;
-}
-void game::getClick() {
-	}
 //player movement update function
 void game::updateInput()
 {
@@ -235,13 +236,12 @@ void game::pollEEvent() {
 		case sf::Event::MouseButtonPressed:
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 				this->mPWH = sf::Mouse::getPosition(*this->window);
-				this->newM.setClick();
 				std::cout << mPWH.x;
 				std::cout << mPWH.y;
 			}
 		}
+		}
 	}
-}
 
 void game::update()
 {	
@@ -258,19 +258,22 @@ void game::splashRenderer() {
 }
 void game::menuRenderer() {
 	this->window->clear();
+	this->pollEEvent();
 	this->newM.renderMenu(this->window);
+	this->gui.drawShade(this->window);
 	this->window->display();
 }
 void game::completeMenu() {
-
 	//load splash before menu
 	while (counter < 60) {
 		this->splashRenderer();
 		++counter;
 	}
+	if (this->mPWH.x < 33 && this->mPWH.y>33) {
+		std::cout << "meow";
+	}
+	this->changeShade();
 	this->menuRenderer();
-	this->getClick();
-	this->rClick();
 }
 void game::drawPlayer() {
 	this->player.render(this->window);
@@ -310,38 +313,29 @@ void game::roomRenderer() {
 	this->window->draw(bowl);
 	this->window->draw(bowl4);
 	this->window->draw(ePrompt);
-	this->getClick();
-	this->rClick();
 	this->updateInput();
 	this->drawPlayer();
 	this->window->display();
-	cursorHold.x = mPWH.x;
-	cursorHold.y = mPWH.y;
 }
 //renders bowl game room
 void game::bowlGame() {
 	this->window->clear();
-	this->rClick();
 	while (counter == 0) {
 		this->window->clear();
 		this->cake.doInstructions(window);
-		this->pollEEvent();
-		this->getClick();
+		this->pollEEvent(); 
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 			this->window->clear();
-			counter = 1;
+			counter = 1;  
 		}
 		this->window->display();
 		}
 	this->cake.doBowlClick(this->window);
 	this->cake.drawPlayer(2, this->window);
 	this->pollEEvent();
-	this->getClick();
-	this->rClick();
 	this->window->display();
 }
 //return whether the window is open or not
 const bool game::windowIsOpen() const {
 	return this->window->isOpen();
 }
-

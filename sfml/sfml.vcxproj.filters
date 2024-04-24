@@ -30,6 +30,9 @@
     <ClCompile Include="cakeScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cakeScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -86,6 +92,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="tex\sprites\minigameSprites\ExpressionBubbles.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="tex\menu\StarSheet.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

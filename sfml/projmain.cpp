@@ -25,12 +25,12 @@ int main()
 				cookGame.resetCounter();
 				opt = 3;
 			}
-		if (opt == 3) {
-			cookGame.updateMousePos();
-			cookGame.pollEEvent();
-			cookGame.bowlGame();
-		}
+			if (opt == 3) {
+				cookGame.updateMousePos();
+				cookGame.pollEEvent();
+				cookGame.bowlGame();
 			}
 		}
-		return 0;
+	}
+	return 0;
 }
