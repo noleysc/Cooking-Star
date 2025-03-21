@@ -8,3 +8,5 @@ Video Demo
 Requires SFML to run
 
 In order to contribute, write code in C++ according to MIT coding standard.
+
+Report bugs to nolanstilwell132@gmail.com
