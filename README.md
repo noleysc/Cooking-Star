@@ -6,4 +6,4 @@ https://youtu.be/y30pVRfHOXM
 Video Demo
 
 Requires SFML
-In order to contribute, write code in C++ according to MIT coding standard. Contact owner of repository to suggest code
+In order to contribute, write code in C++ according to MIT coding standard.
