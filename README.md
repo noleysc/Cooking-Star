@@ -1,4 +1,4 @@
 
 https://youtu.be/y30pVRfHOXM
 Video Demo
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/{noleysc}/{Cooking-Star}/badge)](https://scorecard.dev/viewer/?uri=github.com/{owner}/{repo})
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/{noleysc}/{noleysc/Cooking-Star}/badge)](https://scorecard.dev/viewer/?uri=github.com/{owner}/{repo})
