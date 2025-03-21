@@ -5,5 +5,6 @@ Small W.I.P. videogame, featuring a cat that likes to cook to relieve stress.
 https://youtu.be/y30pVRfHOXM
 Video Demo
 
-Requires SFML
+Requires SFML to run
+
 In order to contribute, write code in C++ according to MIT coding standard.
